@@ -4,7 +4,6 @@
   "description": "SysmeLite PMS Offline - Electron + React + SQLite",
   "author": "Tu Nombre o Empresa",
   "main": "main.cjs",
-  "type": "module",
   "scripts": {
     "start": "electron .",
     "dev": "vite",
