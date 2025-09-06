@@ -1,0 +1,53 @@
+{
+  "name": "sysmelite-pms-offline",
+  "version": "1.0.0",
+  "description": "SysmeLite PMS Offline - Electron + React + SQLite",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "dev": "vite",
+    "build:renderer": "vite build --outDir renderer/dist",
+    "build": "npm run build:renderer",
+    "dist": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "com.sysmelite.pms",
+    "productName": "SysmeLite PMS",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/dist",
+      "node_modules/"
+    ],
+    "extraResources": [
+      {
+        "from": "database/",
+        "to": "database/",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^4.2.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
