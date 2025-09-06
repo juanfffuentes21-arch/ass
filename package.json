@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "SysmeLite PMS Offline - Electron + React + SQLite",
   "author": "Tu Nombre o Empresa",
-  "main": "main.js",
+  "main": "main.cjs",
   "type": "module",
   "scripts": {
     "start": "electron .",
