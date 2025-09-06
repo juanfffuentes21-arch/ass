@@ -2,6 +2,7 @@
   "name": "sysmelite-pms-offline",
   "version": "1.0.0",
   "description": "SysmeLite PMS Offline - Electron + React + SQLite",
+  "author": "Tu Nombre o Empresa",
   "main": "main.js",
   "type": "module",
   "scripts": {
@@ -31,6 +32,7 @@
       }
     ],
     "win": {
+      "icon": "build/icon.ico",
       "target": "nsis"
     },
     "nsis": {
@@ -51,3 +53,4 @@
     "react-dom": "^18.2.0"
   }
 }
+
